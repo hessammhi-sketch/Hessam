@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-text antialiased;
+  background-image:
+    radial-gradient(circle at top left, rgba(183, 255, 106, 0.12), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.06), transparent 24%),
+    linear-gradient(180deg, #0b100e 0%, #111916 100%);
+  min-height: 100vh;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #34423d transparent;
+}
+
+input,
+textarea,
+select {
+  @apply w-full rounded-2xl border border-line bg-surface/80 px-4 py-3 text-sm text-text outline-none transition;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  @apply border-accent ring-2 ring-accent/20;
+}
+
+button {
+  @apply transition;
+}
