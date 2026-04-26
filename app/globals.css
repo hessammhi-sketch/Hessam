@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html {
@@ -11,12 +11,13 @@ html {
 }
 
 body {
-  @apply bg-background text-text antialiased;
+  @apply antialiased;
   background-image:
-    radial-gradient(circle at top left, rgba(183, 255, 106, 0.12), transparent 28%),
-    radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.06), transparent 24%),
-    linear-gradient(180deg, #0b100e 0%, #111916 100%);
+    radial-gradient(circle at top left, rgba(255, 138, 84, 0.18), transparent 26%),
+    radial-gradient(circle at bottom right, rgba(91, 179, 146, 0.12), transparent 22%),
+    linear-gradient(180deg, #fff8f4 0%, #f7f0e9 100%);
   min-height: 100vh;
+  color: #171411;
 }
 
 * {
@@ -27,13 +28,14 @@ body {
 input,
 textarea,
 select {
-  @apply w-full rounded-2xl border border-line bg-surface/80 px-4 py-3 text-sm text-text outline-none transition;
+  @apply w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm text-[#171411] outline-none transition;
 }
 
 input:focus,
 textarea:focus,
 select:focus {
-  @apply border-accent ring-2 ring-accent/20;
+  border-color: #ff7d4d;
+  box-shadow: 0 0 0 2px rgba(255, 125, 77, 0.16);
 }
 
 button {
